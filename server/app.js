@@ -10,9 +10,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+let signin = require('./routers/signin');
 let users = require('./routers/users');
 let menus = require('./routers/menus');
 
+app.use('/api/signin', signin);
 app.use('/api/users', users);
 app.use('/api/menus', menus);
 
