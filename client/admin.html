@@ -65,9 +65,8 @@
     </nav>
 
     <div class="container-fluid">
-      <div id="main-row" class="row">
-
-
+      <div id="app" class="row main-row">
+        <!-- Menu -->
         <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-5">
@@ -101,16 +100,13 @@
             <div class="col-md-7">
               <table class="table table-hover table-bordered">
                 <tr id="table-head">
-                  <th>No</th>
                   <th>Nama</th>
                   <th>Harga</th>
                   <th>Stock</th>
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>Pecel Lele Kacang</td>
-                  <td>14000</td>
-                  <td>50</td>
+                  <td v-for="menu in menus">{{ menu }}</td>
+
                 </tr>
               </table>
             </div>
@@ -122,6 +118,7 @@
             </div>
           </div>
 
+          <!-- User -->
           <div class="row">
             <div class="col-md-5">
               <center><h2><span class="label">Add new user</span></h2></center>
@@ -198,4 +195,28 @@
     </footer>
 
   </body>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        menus: []
+      },
+      methods: {
+        getMenuData: function() {
+          var self = this
+          axios.get('http://localhost:3000/api/menus')
+          .then(menus => {
+            console.log(menus.data);
+            self.menus = menus.data
+          })
+          .catch(err => {
+            console.log(err);
+          })
+        }
+      },
+      created: function() {
+        this.getMenuData();
+      }
+    })
+  </script>
 </html>
