@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userCont = require('../controllers/userController');
-const userAuth = require('../helpers/verifyToken')
+const userAuth = require('../helpers/verifyToken');
 
 router.get('/', userAuth.verifyTokenForAdmin, userCont.getAllUsers);
 router.get('/:id', userAuth.verifyTokenForAdminKasir, userCont.getOneUser);
