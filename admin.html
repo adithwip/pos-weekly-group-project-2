@@ -62,28 +62,9 @@
 
     <div class="container-fluid">
       <div id="main-row" class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
-        </div>
 
-        <div class="col-md-10">
+
+        <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-5">
               <center><h2><span class="label">Add new menu</span></h2></center>
@@ -97,20 +78,20 @@
               <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1"><span class="label">Nama menu</span></label>
-                  <input name="nama_menu" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama menu">
+                  <input name="nama_menu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama menu">
                   <small id="emailHelp" class="form-text text-muted">Masukan nama menu yang sesuai dengan menu yang ada di kartu menu</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1"><span class="label">Harga</span></label>
-                  <input name="harga" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan harga">
+                  <input name="harga" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan harga">
                   <small id="emailHelp" class="form-text text-muted">Masukkan harga yang sesuai dengan menu yang didesain</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1"><span class="label">Stock</span></label>
-                  <input name="stock" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tentukan stock">
+                  <input name="stock" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tentukan stock">
                   <small id="emailHelp" class="form-text text-muted">Tentukan stock saji menu per harinya.</small>
                 </div>
-                <button type="submit" id="btn-submit" class="btn">Submit</button>
+                <center><button type="submit" id="btn-submit" class="btn">Submit</button></center>
               </form>
             </div>
             <div class="col-md-7">
@@ -149,45 +130,68 @@
             <div class="col-md-5">
               <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1"><span class="label">Nama menu</span></label>
-                  <input name="nama_menu" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama menu">
-                  <small id="emailHelp" class="form-text text-muted">Masukan nama menu yang sesuai dengan menu yang ada di kartu menu</small>
+                  <label for="exampleInputEmail1"><span class="label">Nama user</span></label>
+                  <input name="nama_menu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama user">
+                  <small id="emailHelp" class="form-text text-muted">Masukan nama user yang sesuai</small>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1"><span class="label">Harga</span></label>
-                  <input name="harga" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan harga">
+                  <label for="exampleInputEmail1"><span class="label">username</span></label>
+                  <input name="harga" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan harga">
                   <small id="emailHelp" class="form-text text-muted">Masukkan harga yang sesuai dengan menu yang didesain</small>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1"><span class="label">Stock</span></label>
+                  <label for="exampleInputEmail1"><span class="label">password</span></label>
+                  <input name="stock" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tentukan stock">
+                  <small id="emailHelp" class="form-text text-muted">Tentukan stock saji menu per harinya.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><span class="label">email</span></label>
                   <input name="stock" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tentukan stock">
                   <small id="emailHelp" class="form-text text-muted">Tentukan stock saji menu per harinya.</small>
                 </div>
-                <button type="submit" id="btn-submit" class="btn">Submit</button>
+                <div class="form-group">
+                  <label for="exampleSelect1">Pilih role untuk user</label>
+                  <select class="form-control" id="exampleSelect1">
+                    <option>Pilih role untuk user</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                  </select>
+                </div>
+                <center><button type="submit" id="btn-submit" class="btn">Submit</button></center>
               </form>
             </div>
             <div class="col-md-7">
               <table class="table table-hover table-bordered">
                 <tr id="table-head">
-                  <th>No</th>
                   <th>Nama</th>
-                  <th>Harga</th>
-                  <th>Stock</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Salt</th>
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>Pecel Lele Kacang</td>
-                  <td>14000</td>
-                  <td>50</td>
+                  <td>Budhi Priyatmojo</td>
+                  <td>cuteman</td>
+                  <td>696969</td>
+                  <td>budhi@gmail.com</td>
+                  <td>admin</td>
+                  <td>ASDw441J</td>
                 </tr>
               </table>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
+
+    <footer>
+      <div id="footer" class="container-fluid">
+        <div class="row">
+
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
