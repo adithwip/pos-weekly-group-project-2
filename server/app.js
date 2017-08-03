@@ -11,7 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 let users = require('./routers/users');
+let menus = require('./routers/menus');
 
 app.use('/api/users', users);
+app.use('/api/menus', menus);
 
 app.listen(process.env.PORT || 3000)
