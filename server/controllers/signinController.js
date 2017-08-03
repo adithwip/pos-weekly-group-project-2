@@ -11,6 +11,7 @@ function signin(req, res, next) {
     username : usernameFromLogin
   })
   .then(user => {
+    console.log(user);
     console.log('================ini masuk ke user');
     var saltUserLogin = user.salt;
     console.log('==========ini saltUserLogin', saltUserLogin);
